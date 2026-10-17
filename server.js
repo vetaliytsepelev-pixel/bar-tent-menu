@@ -92,5 +92,7 @@ app.get('/qr', async (req, res) => {
 });
 
 app.get(['/bar', '/bar/'], (req, res) => res.sendFile(path.join(ROOT, 'public', 'bar.html')));
+// статическое демо (как на GitHub Pages): node tools/build-static.mjs → docs/
+if (fs.existsSync(path.join(ROOT, 'docs'))) app.use('/demo', express.static(path.join(ROOT, 'docs'), { setHeaders: res => res.set('Cache-Control', 'no-cache') }));
 
 app.listen(PORT, () => console.log(`Bar Tent: http://localhost:${PORT}  бар: /bar  QR: /qr  (PIN бара: ${CONFIG.barPin || 'без PIN'})`));

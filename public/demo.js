@@ -53,7 +53,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     const isBar = /bar\.html$/.test(location.pathname);
     const a = document.createElement('a'); a.href = isBar ? 'index.html' : 'bar.html'; a.textContent = isBar ? '‹ меню гостя' : 'DEMO · экран бара ›';
-    a.style.cssText = 'position:fixed;left:10px;bottom:' + (isBar ? '12px' : '96px') + ';z-index:50;background:#222;color:#e4d791;border:1px solid #444;border-radius:999px;padding:6px 12px;font:600 12px/1.2 Arial,sans-serif;text-decoration:none;opacity:.9';
+    a.style.cssText = 'position:fixed;right:8px;top:3px;z-index:50;background:#111;color:#e4d791;border:1px solid #444;border-radius:999px;padding:3px 10px;font:600 11px/1.2 Arial,sans-serif;text-decoration:none;opacity:.95';
     document.body.appendChild(a);
   });
 })();
