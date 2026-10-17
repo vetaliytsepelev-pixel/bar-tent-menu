@@ -1,123 +1,1023 @@
 {
   "currency": "€",
-  "languages": ["es", "en", "uk"],
-  "tapasNote": { "es": "Tapas 1,8 € — el camarero las lleva a tu mesa, elige las que quieras", "en": "Tapas €1.80 — the waiter brings them around, just pick what you like", "uk": "Тапаси 1,8 € — офіціант розносить їх по залу, просто обирайте" },
+  "languages": [
+    "es",
+    "en",
+    "uk"
+  ],
+  "tapasNote": {
+    "es": "Tapas 1,8 € — el camarero las lleva a tu mesa, elige las que quieras",
+    "en": "Tapas €1.80 — the waiter brings them around, just pick what you like",
+    "uk": "Тапаси 1,8 € — офіціант розносить їх по залу, просто обирайте"
+  },
   "categories": [
     {
-      "id": "platos", "name": { "es": "Platos", "en": "Dishes", "uk": "Страви" }, "layout": "cards",
+      "id": "platos",
+      "name": {
+        "es": "Platos",
+        "en": "Dishes",
+        "uk": "Страви"
+      },
+      "layout": "cards",
       "items": [
-        { "id": "langostinos", "name": { "es": "Langostinos", "en": "Prawns", "uk": "Лангустини" }, "price": 9.0, "photo": "langostinos" },
-        { "id": "queso", "name": { "es": "Tabla de queso", "en": "Cheese board", "uk": "Сирна дошка" }, "price": 9.0, "photo": "queso" },
-        { "id": "jamon", "name": { "es": "Jamón", "en": "Ham", "uk": "Хамон" }, "price": 9.0, "photo": "jamon" },
-        { "id": "chuleton", "name": { "es": "Chuletón", "en": "Pork steak", "uk": "Свинячий стейк" }, "price": 9.0, "photo": "chuleton" }
+        {
+          "id": "langostinos",
+          "name": {
+            "es": "Langostinos",
+            "en": "Prawns",
+            "uk": "Лангустини"
+          },
+          "price": 9,
+          "photo": "langostinos"
+        },
+        {
+          "id": "queso",
+          "name": {
+            "es": "Tabla de queso",
+            "en": "Cheese board",
+            "uk": "Сирна дошка"
+          },
+          "price": 9,
+          "photo": "queso"
+        },
+        {
+          "id": "jamon",
+          "name": {
+            "es": "Jamón",
+            "en": "Ham",
+            "uk": "Хамон"
+          },
+          "price": 9,
+          "photo": "jamon"
+        },
+        {
+          "id": "chuleton",
+          "name": {
+            "es": "Chuletón",
+            "en": "Pork steak",
+            "uk": "Свинячий стейк"
+          },
+          "price": 9,
+          "photo": "chuleton"
+        }
       ]
     },
     {
-      "id": "cocktails", "name": { "es": "Cócteles", "en": "Cocktails", "uk": "Коктейлі" }, "layout": "cards",
+      "id": "cocktails",
+      "name": {
+        "es": "Cócteles",
+        "en": "Cocktails",
+        "uk": "Коктейлі"
+      },
+      "layout": "cards",
       "items": [
-        { "id": "pina-colada", "name": { "es": "Piña colada", "en": "Piña colada", "uk": "Піна колада" }, "desc": { "es": "ron", "en": "rum", "uk": "ром" }, "price": 8.5, "photo": "pina-colada" },
-        { "id": "irish-mule", "name": { "es": "Irish mule", "en": "Irish mule", "uk": "Айріш мул" }, "desc": { "es": "whisky, ginger ale", "en": "whisky, ginger ale", "uk": "віскі, джинджер ель" }, "price": 8.5, "photo": "irish-mule" },
-        { "id": "aperol-sour", "name": { "es": "Aperol sour", "en": "Aperol sour", "uk": "Апероль сауер" }, "desc": { "es": "aperol", "en": "aperol", "uk": "апероль" }, "price": 8.5, "photo": "aperol-sour" },
-        { "id": "daiquiri", "name": { "es": "Daiquiri", "en": "Daiquiri", "uk": "Дайкірі" }, "desc": { "es": "ron", "en": "rum", "uk": "ром" }, "price": 8.5, "photo": "daiquiri" },
-        { "id": "aperol-spritz", "name": { "es": "Aperol spritz", "en": "Aperol spritz", "uk": "Апероль шприц" }, "desc": { "es": "aperol, cava", "en": "aperol, cava", "uk": "апероль, кава" }, "price": 8.5, "photo": "aperol-spritz" },
-        { "id": "cosmopolitan", "name": { "es": "Cosmopolitan", "en": "Cosmopolitan", "uk": "Космополітен" }, "desc": { "es": "vodka, triple sec", "en": "vodka, triple sec", "uk": "горілка, трипл сек" }, "price": 8.5, "photo": "cosmopolitan" },
-        { "id": "french-77", "name": { "es": "French 77", "en": "French 77", "uk": "Френч 77" }, "desc": { "es": "gin, cava", "en": "gin, cava", "uk": "джин, кава" }, "price": 8.5, "photo": "french-77" },
-        { "id": "boulevardier", "name": { "es": "Boulevardier", "en": "Boulevardier", "uk": "Бульвардьє" }, "desc": { "es": "campari, whisky, martini", "en": "campari, whisky, martini", "uk": "кампарі, віскі, мартіні" }, "price": 8.5, "photo": "boulevardier" },
-        { "id": "tent-club", "name": { "es": "Tent Club", "en": "Tent Club", "uk": "Тент Клаб" }, "desc": { "es": "gin, frambuesa", "en": "gin, raspberry", "uk": "джин, малина" }, "price": 8.5, "photo": "tent-club" },
-        { "id": "mojito", "name": { "es": "Mojito", "en": "Mojito", "uk": "Мохіто" }, "desc": { "es": "ron", "en": "rum", "uk": "ром" }, "price": 8.5, "photo": "mojito" },
-        { "id": "margarita", "name": { "es": "Margarita", "en": "Margarita", "uk": "Маргарита" }, "desc": { "es": "tequila, triple sec", "en": "tequila, triple sec", "uk": "текіла, трипл сек" }, "price": 8.5, "photo": "margarita" },
-        { "id": "bloody-mary", "name": { "es": "Bloody Mary", "en": "Bloody Mary", "uk": "Кривава Мері" }, "desc": { "es": "vodka, tabasco", "en": "vodka, tabasco", "uk": "горілка, табаско" }, "price": 8.5, "photo": "bloody-mary" },
-        { "id": "espresso-martini", "name": { "es": "Espresso Martini", "en": "Espresso Martini", "uk": "Еспресо мартіні" }, "desc": { "es": "vodka, kahlúa", "en": "vodka, kahlúa", "uk": "горілка, калуа" }, "price": 8.5, "photo": "espresso-martini" },
-        { "id": "negroni", "name": { "es": "Negroni", "en": "Negroni", "uk": "Негроні" }, "desc": { "es": "campari, gin, martini rosso", "en": "campari, gin, martini rosso", "uk": "кампарі, джин, мартіні россо" }, "price": 8.5, "photo": "negroni" },
-        { "id": "gin-tonic", "name": { "es": "Gin tonic", "en": "Gin & tonic", "uk": "Джин-тонік" }, "desc": { "es": "gin", "en": "gin", "uk": "джин" }, "price": 8.5, "photo": "gin-tonic" },
-        { "id": "blue-lagoon", "name": { "es": "Blue Lagoon", "en": "Blue Lagoon", "uk": "Блакитна лагуна" }, "desc": { "es": "vodka, blue curaçao", "en": "vodka, blue curaçao", "uk": "горілка, блю кюрасао" }, "price": 8.5, "photo": "blue-lagoon" },
-        { "id": "sex-on-the-beach", "name": { "es": "Sex on the beach", "en": "Sex on the beach", "uk": "Секс на пляжі" }, "desc": { "es": "vodka", "en": "vodka", "uk": "горілка" }, "price": 8.5, "photo": "sex-on-the-beach" },
-        { "id": "cuba-libre", "name": { "es": "Cuba Libre", "en": "Cuba Libre", "uk": "Куба лібре" }, "desc": { "es": "ron", "en": "rum", "uk": "ром" }, "price": 8.5, "photo": "cuba-libre" },
-        { "id": "mai-tai", "name": { "es": "Mai Tai", "en": "Mai Tai", "uk": "Май Тай" }, "desc": { "es": "ron blanco / gold", "en": "white / gold rum", "uk": "білий / золотий ром" }, "price": 8.5, "photo": "mai-tai" },
-        { "id": "pornstar-martini", "name": { "es": "Pornstar Martini", "en": "Pornstar Martini", "uk": "Порнстар мартіні" }, "desc": { "es": "vodka, vainilla", "en": "vodka, vanilla", "uk": "горілка, ваніль" }, "price": 8.5, "photo": "pornstar-martini" },
-        { "id": "whisky-sour", "name": { "es": "Whisky Sour", "en": "Whisky Sour", "uk": "Віскі сауер" }, "desc": { "es": "whisky", "en": "whisky", "uk": "віскі" }, "price": 8.5, "photo": "whisky-sour" }
+        {
+          "id": "pina-colada",
+          "name": {
+            "es": "Piña colada",
+            "en": "Piña colada",
+            "uk": "Піна колада"
+          },
+          "desc": {
+            "es": "ron",
+            "en": "rum",
+            "uk": "ром"
+          },
+          "price": 8.5,
+          "photo": "pina-colada"
+        },
+        {
+          "id": "irish-mule",
+          "name": {
+            "es": "Irish mule",
+            "en": "Irish mule",
+            "uk": "Айріш мул"
+          },
+          "desc": {
+            "es": "whisky, ginger ale",
+            "en": "whisky, ginger ale",
+            "uk": "віскі, джинджер ель"
+          },
+          "price": 8.5,
+          "photo": "irish-mule"
+        },
+        {
+          "id": "aperol-sour",
+          "name": {
+            "es": "Aperol sour",
+            "en": "Aperol sour",
+            "uk": "Апероль сауер"
+          },
+          "desc": {
+            "es": "aperol",
+            "en": "aperol",
+            "uk": "апероль"
+          },
+          "price": 8.5,
+          "photo": "aperol-sour"
+        },
+        {
+          "id": "daiquiri",
+          "name": {
+            "es": "Daiquiri",
+            "en": "Daiquiri",
+            "uk": "Дайкірі"
+          },
+          "desc": {
+            "es": "ron",
+            "en": "rum",
+            "uk": "ром"
+          },
+          "price": 8.5,
+          "photo": "daiquiri"
+        },
+        {
+          "id": "aperol-spritz",
+          "name": {
+            "es": "Aperol spritz",
+            "en": "Aperol spritz",
+            "uk": "Апероль шприц"
+          },
+          "desc": {
+            "es": "aperol, cava",
+            "en": "aperol, cava",
+            "uk": "апероль, кава"
+          },
+          "price": 8.5,
+          "photo": "aperol-spritz"
+        },
+        {
+          "id": "cosmopolitan",
+          "name": {
+            "es": "Cosmopolitan",
+            "en": "Cosmopolitan",
+            "uk": "Космополітен"
+          },
+          "desc": {
+            "es": "vodka, triple sec",
+            "en": "vodka, triple sec",
+            "uk": "горілка, трипл сек"
+          },
+          "price": 8.5,
+          "photo": "cosmopolitan"
+        },
+        {
+          "id": "french-77",
+          "name": {
+            "es": "French 77",
+            "en": "French 77",
+            "uk": "Френч 77"
+          },
+          "desc": {
+            "es": "gin, cava",
+            "en": "gin, cava",
+            "uk": "джин, кава"
+          },
+          "price": 8.5,
+          "photo": "french-77"
+        },
+        {
+          "id": "boulevardier",
+          "name": {
+            "es": "Boulevardier",
+            "en": "Boulevardier",
+            "uk": "Бульвардьє"
+          },
+          "desc": {
+            "es": "campari, whisky, martini",
+            "en": "campari, whisky, martini",
+            "uk": "кампарі, віскі, мартіні"
+          },
+          "price": 8.5,
+          "photo": "boulevardier"
+        },
+        {
+          "id": "tent-club",
+          "name": {
+            "es": "Tent Club",
+            "en": "Tent Club",
+            "uk": "Тент Клаб"
+          },
+          "desc": {
+            "es": "gin, frambuesa",
+            "en": "gin, raspberry",
+            "uk": "джин, малина"
+          },
+          "price": 8.5,
+          "photo": "tent-club"
+        },
+        {
+          "id": "mojito",
+          "name": {
+            "es": "Mojito",
+            "en": "Mojito",
+            "uk": "Мохіто"
+          },
+          "desc": {
+            "es": "ron",
+            "en": "rum",
+            "uk": "ром"
+          },
+          "price": 8.5,
+          "photo": "mojito"
+        },
+        {
+          "id": "margarita",
+          "name": {
+            "es": "Margarita",
+            "en": "Margarita",
+            "uk": "Маргарита"
+          },
+          "desc": {
+            "es": "tequila, triple sec",
+            "en": "tequila, triple sec",
+            "uk": "текіла, трипл сек"
+          },
+          "price": 8.5,
+          "photo": "margarita"
+        },
+        {
+          "id": "bloody-mary",
+          "name": {
+            "es": "Bloody Mary",
+            "en": "Bloody Mary",
+            "uk": "Кривава Мері"
+          },
+          "desc": {
+            "es": "vodka, tabasco",
+            "en": "vodka, tabasco",
+            "uk": "горілка, табаско"
+          },
+          "price": 8.5,
+          "photo": "bloody-mary"
+        },
+        {
+          "id": "espresso-martini",
+          "name": {
+            "es": "Espresso Martini",
+            "en": "Espresso Martini",
+            "uk": "Еспресо мартіні"
+          },
+          "desc": {
+            "es": "vodka, kahlúa",
+            "en": "vodka, kahlúa",
+            "uk": "горілка, калуа"
+          },
+          "price": 8.5,
+          "photo": "espresso-martini"
+        },
+        {
+          "id": "negroni",
+          "name": {
+            "es": "Negroni",
+            "en": "Negroni",
+            "uk": "Негроні"
+          },
+          "desc": {
+            "es": "campari, gin, martini rosso",
+            "en": "campari, gin, martini rosso",
+            "uk": "кампарі, джин, мартіні россо"
+          },
+          "price": 8.5,
+          "photo": "negroni"
+        },
+        {
+          "id": "gin-tonic",
+          "name": {
+            "es": "Gin tonic",
+            "en": "Gin & tonic",
+            "uk": "Джин-тонік"
+          },
+          "desc": {
+            "es": "gin",
+            "en": "gin",
+            "uk": "джин"
+          },
+          "price": 8.5,
+          "photo": "gin-tonic"
+        },
+        {
+          "id": "blue-lagoon",
+          "name": {
+            "es": "Blue Lagoon",
+            "en": "Blue Lagoon",
+            "uk": "Блакитна лагуна"
+          },
+          "desc": {
+            "es": "vodka, blue curaçao",
+            "en": "vodka, blue curaçao",
+            "uk": "горілка, блю кюрасао"
+          },
+          "price": 8.5,
+          "photo": "blue-lagoon"
+        },
+        {
+          "id": "sex-on-the-beach",
+          "name": {
+            "es": "Sex on the beach",
+            "en": "Sex on the beach",
+            "uk": "Секс на пляжі"
+          },
+          "desc": {
+            "es": "vodka",
+            "en": "vodka",
+            "uk": "горілка"
+          },
+          "price": 8.5,
+          "photo": "sex-on-the-beach"
+        },
+        {
+          "id": "cuba-libre",
+          "name": {
+            "es": "Cuba Libre",
+            "en": "Cuba Libre",
+            "uk": "Куба лібре"
+          },
+          "desc": {
+            "es": "ron",
+            "en": "rum",
+            "uk": "ром"
+          },
+          "price": 8.5,
+          "photo": "cuba-libre"
+        },
+        {
+          "id": "mai-tai",
+          "name": {
+            "es": "Mai Tai",
+            "en": "Mai Tai",
+            "uk": "Май Тай"
+          },
+          "desc": {
+            "es": "ron blanco / gold",
+            "en": "white / gold rum",
+            "uk": "білий / золотий ром"
+          },
+          "price": 8.5,
+          "photo": "mai-tai"
+        },
+        {
+          "id": "pornstar-martini",
+          "name": {
+            "es": "Pornstar Martini",
+            "en": "Pornstar Martini",
+            "uk": "Порнстар мартіні"
+          },
+          "desc": {
+            "es": "vodka, vainilla",
+            "en": "vodka, vanilla",
+            "uk": "горілка, ваніль"
+          },
+          "price": 8.5,
+          "photo": "pornstar-martini"
+        },
+        {
+          "id": "whisky-sour",
+          "name": {
+            "es": "Whisky Sour",
+            "en": "Whisky Sour",
+            "uk": "Віскі сауер"
+          },
+          "desc": {
+            "es": "whisky",
+            "en": "whisky",
+            "uk": "віскі"
+          },
+          "price": 8.5,
+          "photo": "whisky-sour"
+        }
       ]
     },
     {
-      "id": "soft", "name": { "es": "Sin alcohol", "en": "Soft drinks", "uk": "Безалкогольні" }, "layout": "list",
+      "id": "soft",
+      "name": {
+        "es": "Sin alcohol",
+        "en": "Soft drinks",
+        "uk": "Безалкогольні"
+      },
+      "layout": "list",
       "groups": [
-        { "name": { "es": "Limonadas", "en": "Lemonades", "uk": "Лимонади" }, "items": [
-          { "id": "limonada-clasica", "name": { "es": "Limonada clásica", "en": "Classic lemonade", "uk": "Лимонад класичний" }, "price": 6.0 },
-          { "id": "limonada-fresa", "name": { "es": "Limonada de fresa", "en": "Strawberry lemonade", "uk": "Лимонад з полуницею" }, "price": 6.0 },
-          { "id": "limonada-mango", "name": { "es": "Limonada de mango", "en": "Mango lemonade", "uk": "Лимонад з манго" }, "price": 6.0 },
-          { "id": "mojito-sin", "name": { "es": "Mojito sin alcohol", "en": "Virgin mojito", "uk": "Мохіто безалкогольний" }, "price": 6.0, "check": true },
-          { "id": "pina-colada-sin", "name": { "es": "Piña colada sin alcohol", "en": "Virgin piña colada", "uk": "Піна колада безалкогольна" }, "price": 6.0, "check": true }
-        ] },
-        { "name": { "es": "Refrescos", "en": "Soft drinks", "uk": "Газовані напої" }, "items": [
-          { "id": "coca-cola", "name": { "es": "Coca-Cola", "en": "Coca-Cola", "uk": "Кока-кола" }, "price": 2.5, "check": true },
-          { "id": "coca-cola-zero", "name": { "es": "Coca-Cola Zero", "en": "Coca-Cola Zero", "uk": "Кока-кола зеро" }, "price": 2.5, "check": true },
-          { "id": "fanta", "name": { "es": "Fanta", "en": "Fanta", "uk": "Фанта" }, "price": 2.5, "check": true },
-          { "id": "fanta-limon", "name": { "es": "Fanta limón", "en": "Fanta lemon", "uk": "Фанта лимон" }, "price": 2.5, "check": true },
-          { "id": "sprite", "name": { "es": "Sprite", "en": "Sprite", "uk": "Спрайт" }, "price": 2.5, "check": true },
-          { "id": "schweppes", "name": { "es": "Schweppes", "en": "Schweppes", "uk": "Швепс" }, "price": 2.5, "check": true },
-          { "id": "fuze-tea", "name": { "es": "Fuze tea", "en": "Fuze tea", "uk": "Фьюз ті" }, "price": 2.5, "check": true },
-          { "id": "aquarius-limon", "name": { "es": "Aquarius limón", "en": "Aquarius lemon", "uk": "Аквариус лимон" }, "price": 2.5, "check": true },
-          { "id": "aquarius-naranja", "name": { "es": "Aquarius naranja", "en": "Aquarius orange", "uk": "Аквариус апельсин" }, "price": 2.5, "check": true },
-          { "id": "zumo", "name": { "es": "Zumos variados", "en": "Assorted juices", "uk": "Соки в асортименті" }, "price": 2.5, "check": true },
-          { "id": "agua", "name": { "es": "Agua sin gas", "en": "Still water", "uk": "Вода без газу" }, "price": 1.5, "check": true },
-          { "id": "agua-gas", "name": { "es": "Agua con gas", "en": "Sparkling water", "uk": "Вода з газом" }, "price": 1.5, "check": true }
-        ] },
-        { "name": { "es": "Café", "en": "Coffee", "uk": "Кава" }, "items": [
-          { "id": "cafe-solo", "name": { "es": "Café solo", "en": "Espresso", "uk": "Еспресо" }, "price": 1.5 },
-          { "id": "cafe-con-leche", "name": { "es": "Café con leche", "en": "Coffee with milk", "uk": "Кава з молоком" }, "price": 1.9 },
-          { "id": "cafe-cortado", "name": { "es": "Café cortado", "en": "Cortado", "uk": "Кортадо" }, "price": 1.9 },
-          { "id": "cafe-bombon", "name": { "es": "Café bombón", "en": "Café bombón", "uk": "Кава бомбон" }, "price": 2.3 },
-          { "id": "cafe-carajillo", "name": { "es": "Café carajillo", "en": "Carajillo", "uk": "Карахільйо" }, "price": 2.3 }
-        ] }
+        {
+          "name": {
+            "es": "Limonadas",
+            "en": "Lemonades",
+            "uk": "Лимонади"
+          },
+          "items": [
+            {
+              "id": "limonada-clasica",
+              "name": {
+                "es": "Limonada clásica",
+                "en": "Classic lemonade",
+                "uk": "Лимонад класичний"
+              },
+              "price": 6
+            },
+            {
+              "id": "limonada-fresa",
+              "name": {
+                "es": "Limonada de fresa",
+                "en": "Strawberry lemonade",
+                "uk": "Лимонад з полуницею"
+              },
+              "price": 6
+            },
+            {
+              "id": "limonada-mango",
+              "name": {
+                "es": "Limonada de mango",
+                "en": "Mango lemonade",
+                "uk": "Лимонад з манго"
+              },
+              "price": 6
+            },
+            {
+              "id": "mojito-sin",
+              "name": {
+                "es": "Mojito sin alcohol",
+                "en": "Virgin mojito",
+                "uk": "Мохіто безалкогольний"
+              },
+              "price": 6,
+              "check": true
+            },
+            {
+              "id": "pina-colada-sin",
+              "name": {
+                "es": "Piña colada sin alcohol",
+                "en": "Virgin piña colada",
+                "uk": "Піна колада безалкогольна"
+              },
+              "price": 6,
+              "check": true
+            }
+          ]
+        },
+        {
+          "name": {
+            "es": "Refrescos",
+            "en": "Soft drinks",
+            "uk": "Газовані напої"
+          },
+          "items": [
+            {
+              "id": "coca-cola",
+              "name": {
+                "es": "Coca-Cola",
+                "en": "Coca-Cola",
+                "uk": "Кока-кола"
+              },
+              "price": 2.5,
+              "check": true
+            },
+            {
+              "id": "coca-cola-zero",
+              "name": {
+                "es": "Coca-Cola Zero",
+                "en": "Coca-Cola Zero",
+                "uk": "Кока-кола зеро"
+              },
+              "price": 2.5,
+              "check": true
+            },
+            {
+              "id": "fanta",
+              "name": {
+                "es": "Fanta",
+                "en": "Fanta",
+                "uk": "Фанта"
+              },
+              "price": 2.5,
+              "check": true
+            },
+            {
+              "id": "fanta-limon",
+              "name": {
+                "es": "Fanta limón",
+                "en": "Fanta lemon",
+                "uk": "Фанта лимон"
+              },
+              "price": 2.5,
+              "check": true
+            },
+            {
+              "id": "sprite",
+              "name": {
+                "es": "Sprite",
+                "en": "Sprite",
+                "uk": "Спрайт"
+              },
+              "price": 2.5,
+              "check": true
+            },
+            {
+              "id": "schweppes",
+              "name": {
+                "es": "Schweppes",
+                "en": "Schweppes",
+                "uk": "Швепс"
+              },
+              "price": 2.5,
+              "check": true
+            },
+            {
+              "id": "fuze-tea",
+              "name": {
+                "es": "Fuze tea",
+                "en": "Fuze tea",
+                "uk": "Фьюз ті"
+              },
+              "price": 2.5,
+              "check": true
+            },
+            {
+              "id": "aquarius-limon",
+              "name": {
+                "es": "Aquarius limón",
+                "en": "Aquarius lemon",
+                "uk": "Аквариус лимон"
+              },
+              "price": 2.5,
+              "check": true
+            },
+            {
+              "id": "aquarius-naranja",
+              "name": {
+                "es": "Aquarius naranja",
+                "en": "Aquarius orange",
+                "uk": "Аквариус апельсин"
+              },
+              "price": 2.5,
+              "check": true
+            },
+            {
+              "id": "zumo",
+              "name": {
+                "es": "Zumos variados",
+                "en": "Assorted juices",
+                "uk": "Соки в асортименті"
+              },
+              "price": 2.5,
+              "check": true
+            },
+            {
+              "id": "agua",
+              "name": {
+                "es": "Agua sin gas",
+                "en": "Still water",
+                "uk": "Вода без газу"
+              },
+              "price": 1.5,
+              "check": true
+            },
+            {
+              "id": "agua-gas",
+              "name": {
+                "es": "Agua con gas",
+                "en": "Sparkling water",
+                "uk": "Вода з газом"
+              },
+              "price": 1.5,
+              "check": true
+            }
+          ]
+        },
+        {
+          "name": {
+            "es": "Café",
+            "en": "Coffee",
+            "uk": "Кава"
+          },
+          "items": [
+            {
+              "id": "cafe-solo",
+              "name": {
+                "es": "Café solo",
+                "en": "Espresso",
+                "uk": "Еспресо"
+              },
+              "price": 1.5
+            },
+            {
+              "id": "cafe-con-leche",
+              "name": {
+                "es": "Café con leche",
+                "en": "Coffee with milk",
+                "uk": "Кава з молоком"
+              },
+              "price": 1.9
+            },
+            {
+              "id": "cafe-cortado",
+              "name": {
+                "es": "Café cortado",
+                "en": "Cortado",
+                "uk": "Кортадо"
+              },
+              "price": 1.9
+            },
+            {
+              "id": "cafe-bombon",
+              "name": {
+                "es": "Café bombón",
+                "en": "Café bombón",
+                "uk": "Кава бомбон"
+              },
+              "price": 2.3
+            },
+            {
+              "id": "cafe-carajillo",
+              "name": {
+                "es": "Café carajillo",
+                "en": "Carajillo",
+                "uk": "Карахільйо"
+              },
+              "price": 2.3
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "alcohol", "name": { "es": "Alcohol", "en": "Alcohol", "uk": "Алкоголь" }, "layout": "list",
+      "id": "alcohol",
+      "name": {
+        "es": "Alcohol",
+        "en": "Alcohol",
+        "uk": "Алкоголь"
+      },
+      "layout": "list",
       "groups": [
-        { "name": { "es": "Vino y aperitivos", "en": "Wine & aperitifs", "uk": "Вино та аперитиви" }, "items": [
-          { "id": "vino-blanco", "name": { "es": "Vino blanco", "en": "White wine", "uk": "Біле вино" }, "photo": "wine", "variants": [ { "id": "copa", "name": { "es": "Copa", "en": "Glass", "uk": "Келих" }, "price": 3.5 }, { "id": "botella", "name": { "es": "Botella", "en": "Bottle", "uk": "Пляшка" }, "price": 15.0 } ] },
-          { "id": "vino-tinto", "name": { "es": "Vino tinto", "en": "Red wine", "uk": "Червоне вино" }, "photo": "wine", "variants": [ { "id": "copa", "name": { "es": "Copa", "en": "Glass", "uk": "Келих" }, "price": 3.5 }, { "id": "botella", "name": { "es": "Botella", "en": "Bottle", "uk": "Пляшка" }, "price": 15.0 } ] },
-          { "id": "cava", "name": { "es": "Cava", "en": "Cava", "uk": "Кава (ігристе)" }, "price": 3.5 },
-          { "id": "prosecco", "name": { "es": "Prosecco", "en": "Prosecco", "uk": "Просеко" }, "price": 3.5 },
-          { "id": "lambrusco", "name": { "es": "Lambrusco", "en": "Lambrusco", "uk": "Ламбруско" }, "price": 3.5 },
-          { "id": "tinto-verano", "name": { "es": "Tinto de verano", "en": "Tinto de verano", "uk": "Тінто де верано" }, "price": 3.9 },
-          { "id": "sangria", "name": { "es": "Sangría", "en": "Sangria", "uk": "Сангрія" }, "price": 3.9 },
-          { "id": "vermut", "name": { "es": "Vermut", "en": "Vermouth", "uk": "Вермут" }, "price": 3.0 }
-        ] },
-        { "name": { "es": "Alcohol fuerte · chupito 2,5 € / botella 0,7 l 39 €", "en": "Strong alcohol · shot €2.50 / bottle 0.7 l €39", "uk": "Міцний алкоголь · шот 2,5 € / пляшка 0,7 л 39 €" }, "shotBottle": true, "items": [
-          { "id": "ballantines", "name": { "es": "Ballantine's", "en": "Ballantine's", "uk": "Ballantine's" } },
-          { "id": "red-label", "name": { "es": "Red Label", "en": "Red Label", "uk": "Red Label" } },
-          { "id": "jb", "name": { "es": "J&B", "en": "J&B", "uk": "J&B" } },
-          { "id": "bacardi", "name": { "es": "Bacardí", "en": "Bacardí", "uk": "Bacardí" } },
-          { "id": "brugal", "name": { "es": "Brugal", "en": "Brugal", "uk": "Brugal" } },
-          { "id": "barcelo", "name": { "es": "Barceló", "en": "Barceló", "uk": "Barceló" } },
-          { "id": "beefeater", "name": { "es": "Beefeater", "en": "Beefeater", "uk": "Beefeater" } },
-          { "id": "seagrams", "name": { "es": "Seagram's", "en": "Seagram's", "uk": "Seagram's" } },
-          { "id": "bombay", "name": { "es": "Bombay Sapphire", "en": "Bombay Sapphire", "uk": "Bombay Sapphire" } },
-          { "id": "absolut", "name": { "es": "Absolut vodka", "en": "Absolut vodka", "uk": "Absolut vodka" } },
-          { "id": "jose-cuervo", "name": { "es": "José Cuervo", "en": "José Cuervo", "uk": "José Cuervo" } },
-          { "id": "martini-bianco", "name": { "es": "Martini bianco", "en": "Martini bianco", "uk": "Martini bianco" } },
-          { "id": "martini-rosso", "name": { "es": "Martini rosso", "en": "Martini rosso", "uk": "Martini rosso" } },
-          { "id": "aperol", "name": { "es": "Aperol", "en": "Aperol", "uk": "Aperol" } },
-          { "id": "campari", "name": { "es": "Campari", "en": "Campari", "uk": "Campari" } },
-          { "id": "jagermeister", "name": { "es": "Jägermeister", "en": "Jägermeister", "uk": "Jägermeister" } },
-          { "id": "limoncello", "name": { "es": "Limoncello", "en": "Limoncello", "uk": "Limoncello" } },
-          { "id": "licor-43", "name": { "es": "Licor 43", "en": "Licor 43", "uk": "Licor 43" } },
-          { "id": "triple-sec", "name": { "es": "Triple sec", "en": "Triple sec", "uk": "Triple sec" } },
-          { "id": "baileys", "name": { "es": "Baileys", "en": "Baileys", "uk": "Baileys" } },
-          { "id": "kahlua", "name": { "es": "Kahlúa", "en": "Kahlúa", "uk": "Kahlúa" } }
-        ] }
+        {
+          "name": {
+            "es": "Vino y aperitivos",
+            "en": "Wine & aperitifs",
+            "uk": "Вино та аперитиви"
+          },
+          "items": [
+            {
+              "id": "vino-blanco",
+              "name": {
+                "es": "Vino blanco",
+                "en": "White wine",
+                "uk": "Біле вино"
+              },
+              "photo": "wine",
+              "variants": [
+                {
+                  "id": "copa",
+                  "name": {
+                    "es": "Copa",
+                    "en": "Glass",
+                    "uk": "Келих"
+                  },
+                  "price": 3.5
+                },
+                {
+                  "id": "botella",
+                  "name": {
+                    "es": "Botella",
+                    "en": "Bottle",
+                    "uk": "Пляшка"
+                  },
+                  "price": 15
+                }
+              ]
+            },
+            {
+              "id": "vino-tinto",
+              "name": {
+                "es": "Vino tinto",
+                "en": "Red wine",
+                "uk": "Червоне вино"
+              },
+              "photo": "wine",
+              "variants": [
+                {
+                  "id": "copa",
+                  "name": {
+                    "es": "Copa",
+                    "en": "Glass",
+                    "uk": "Келих"
+                  },
+                  "price": 3.5
+                },
+                {
+                  "id": "botella",
+                  "name": {
+                    "es": "Botella",
+                    "en": "Bottle",
+                    "uk": "Пляшка"
+                  },
+                  "price": 15
+                }
+              ]
+            },
+            {
+              "id": "cava",
+              "name": {
+                "es": "Cava",
+                "en": "Cava",
+                "uk": "Кава (ігристе)"
+              },
+              "price": 3.5
+            },
+            {
+              "id": "prosecco",
+              "name": {
+                "es": "Prosecco",
+                "en": "Prosecco",
+                "uk": "Просеко"
+              },
+              "price": 3.5
+            },
+            {
+              "id": "lambrusco",
+              "name": {
+                "es": "Lambrusco",
+                "en": "Lambrusco",
+                "uk": "Ламбруско"
+              },
+              "price": 3.5
+            },
+            {
+              "id": "tinto-verano",
+              "name": {
+                "es": "Tinto de verano",
+                "en": "Tinto de verano",
+                "uk": "Тінто де верано"
+              },
+              "price": 3.9
+            },
+            {
+              "id": "sangria",
+              "name": {
+                "es": "Sangría",
+                "en": "Sangria",
+                "uk": "Сангрія"
+              },
+              "price": 3.9
+            },
+            {
+              "id": "vermut",
+              "name": {
+                "es": "Vermut",
+                "en": "Vermouth",
+                "uk": "Вермут"
+              },
+              "price": 3
+            }
+          ]
+        },
+        {
+          "name": {
+            "es": "Alcohol fuerte · chupito 2,5 € / botella 0,7 l 39 €",
+            "en": "Strong alcohol · shot €2.50 / bottle 0.7 l €39",
+            "uk": "Міцний алкоголь · шот 2,5 € / пляшка 0,7 л 39 €"
+          },
+          "shotBottle": true,
+          "items": [
+            {
+              "id": "ballantines",
+              "name": {
+                "es": "Ballantine's",
+                "en": "Ballantine's",
+                "uk": "Ballantine's"
+              }
+            },
+            {
+              "id": "red-label",
+              "name": {
+                "es": "Red Label",
+                "en": "Red Label",
+                "uk": "Red Label"
+              }
+            },
+            {
+              "id": "jb",
+              "name": {
+                "es": "J&B",
+                "en": "J&B",
+                "uk": "J&B"
+              }
+            },
+            {
+              "id": "bacardi",
+              "name": {
+                "es": "Bacardí",
+                "en": "Bacardí",
+                "uk": "Bacardí"
+              }
+            },
+            {
+              "id": "brugal",
+              "name": {
+                "es": "Brugal",
+                "en": "Brugal",
+                "uk": "Brugal"
+              }
+            },
+            {
+              "id": "barcelo",
+              "name": {
+                "es": "Barceló",
+                "en": "Barceló",
+                "uk": "Barceló"
+              }
+            },
+            {
+              "id": "beefeater",
+              "name": {
+                "es": "Beefeater",
+                "en": "Beefeater",
+                "uk": "Beefeater"
+              }
+            },
+            {
+              "id": "seagrams",
+              "name": {
+                "es": "Seagram's",
+                "en": "Seagram's",
+                "uk": "Seagram's"
+              }
+            },
+            {
+              "id": "bombay",
+              "name": {
+                "es": "Bombay Sapphire",
+                "en": "Bombay Sapphire",
+                "uk": "Bombay Sapphire"
+              }
+            },
+            {
+              "id": "absolut",
+              "name": {
+                "es": "Absolut vodka",
+                "en": "Absolut vodka",
+                "uk": "Absolut vodka"
+              }
+            },
+            {
+              "id": "jose-cuervo",
+              "name": {
+                "es": "José Cuervo",
+                "en": "José Cuervo",
+                "uk": "José Cuervo"
+              }
+            },
+            {
+              "id": "martini-bianco",
+              "name": {
+                "es": "Martini bianco",
+                "en": "Martini bianco",
+                "uk": "Martini bianco"
+              }
+            },
+            {
+              "id": "martini-rosso",
+              "name": {
+                "es": "Martini rosso",
+                "en": "Martini rosso",
+                "uk": "Martini rosso"
+              }
+            },
+            {
+              "id": "aperol",
+              "name": {
+                "es": "Aperol",
+                "en": "Aperol",
+                "uk": "Aperol"
+              }
+            },
+            {
+              "id": "campari",
+              "name": {
+                "es": "Campari",
+                "en": "Campari",
+                "uk": "Campari"
+              }
+            },
+            {
+              "id": "jagermeister",
+              "name": {
+                "es": "Jägermeister",
+                "en": "Jägermeister",
+                "uk": "Jägermeister"
+              }
+            },
+            {
+              "id": "limoncello",
+              "name": {
+                "es": "Limoncello",
+                "en": "Limoncello",
+                "uk": "Limoncello"
+              }
+            },
+            {
+              "id": "licor-43",
+              "name": {
+                "es": "Licor 43",
+                "en": "Licor 43",
+                "uk": "Licor 43"
+              }
+            },
+            {
+              "id": "triple-sec",
+              "name": {
+                "es": "Triple sec",
+                "en": "Triple sec",
+                "uk": "Triple sec"
+              }
+            },
+            {
+              "id": "baileys",
+              "name": {
+                "es": "Baileys",
+                "en": "Baileys",
+                "uk": "Baileys"
+              }
+            },
+            {
+              "id": "kahlua",
+              "name": {
+                "es": "Kahlúa",
+                "en": "Kahlúa",
+                "uk": "Kahlúa"
+              }
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "beer", "name": { "es": "Cerveza", "en": "Beer", "uk": "Пиво" }, "layout": "cards",
+      "id": "beer",
+      "name": {
+        "es": "Cerveza",
+        "en": "Beer",
+        "uk": "Пиво"
+      },
+      "layout": "cards",
       "items": [
-        { "id": "cana", "name": { "es": "Caña 0,2 l", "en": "Small beer 0.2 l", "uk": "Маленьке пиво 0,2 л" }, "price": 1.5, "photo": "beer" },
-        { "id": "pinta", "name": { "es": "Pinta 0,5 l", "en": "Pint 0.5 l", "uk": "Велике пиво 0,5 л" }, "price": 3.5, "photo": "beer" },
-        { "id": "torre", "name": { "es": "Torre de cerveza 3 l", "en": "Beer tower 3 l", "uk": "Пивна вежа 3 л" }, "price": 16.2, "photo": "beer-tower", "check": true },
-        { "id": "heineken-0", "name": { "es": "Heineken 0,0", "en": "Heineken 0.0", "uk": "Heineken 0,0" }, "price": 3.5 },
-        { "id": "amstel-0", "name": { "es": "Amstel tostada 0,0", "en": "Amstel toasted 0.0", "uk": "Amstel tostada 0,0" }, "price": 3.5 },
-        { "id": "alhambra", "name": { "es": "Alhambra", "en": "Alhambra", "uk": "Альгамбра" }, "price": 3.5 }
+        {
+          "id": "cana",
+          "name": {
+            "es": "Caña 0,2 l",
+            "en": "Small beer 0.2 l",
+            "uk": "Маленьке пиво 0,2 л"
+          },
+          "price": 1.5,
+          "photo": "cana"
+        },
+        {
+          "id": "pinta",
+          "name": {
+            "es": "Pinta 0,5 l",
+            "en": "Pint 0.5 l",
+            "uk": "Велике пиво 0,5 л"
+          },
+          "price": 3.5,
+          "photo": "pinta"
+        },
+        {
+          "id": "torre",
+          "name": {
+            "es": "Torre de cerveza 3 l",
+            "en": "Beer tower 3 l",
+            "uk": "Пивна вежа 3 л"
+          },
+          "price": 16.2,
+          "photo": "beer-tower",
+          "check": true
+        },
+        {
+          "id": "heineken-0",
+          "name": {
+            "es": "Heineken 0,0",
+            "en": "Heineken 0.0",
+            "uk": "Heineken 0,0"
+          },
+          "price": 3.5,
+          "photo": "heineken-0"
+        },
+        {
+          "id": "amstel-0",
+          "name": {
+            "es": "Amstel tostada 0,0",
+            "en": "Amstel toasted 0.0",
+            "uk": "Amstel tostada 0,0"
+          },
+          "price": 3.5,
+          "photo": "amstel-0"
+        },
+        {
+          "id": "alhambra",
+          "name": {
+            "es": "Alhambra",
+            "en": "Alhambra",
+            "uk": "Альгамбра"
+          },
+          "price": 3.5,
+          "photo": "alhambra"
+        }
       ]
     }
   ]
