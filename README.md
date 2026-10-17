@@ -34,3 +34,7 @@ node server.js
 тарифы подойдут для начала) и домен, например `menu.bartent.es`. Шаги: скопировать папку, `npm install`,
 `node server.js` (лучше через pm2), в `config.json` указать `publicUrl`, напечатать QR с `/qr`.
 Обязательно сменить PIN бара.
+
+## Демо для клиента (GitHub Pages)
+Репозиторий: https://github.com/vetaliytsepelev-pixel/bar-tent-menu — демо без сервера: https://vetaliytsepelev-pixel.github.io/bar-tent-menu/
+(экран бара: …/bar.html, PIN любой; заказы хранятся в браузере того же устройства). Обновить демо: `bash tools/publish.sh "что сделано"`.
