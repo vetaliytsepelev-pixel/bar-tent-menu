@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Bar Tent — pedidos</title>
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0a0a0a; --panel:#171717; --line:#2c2c2c; --orange:#f7931e; --gold:#e4d791; --text:#f5f5f5; --muted:#a0a0a0; --green:#3ddc84; --blue:#5aa9ff; --red:#ff5a5a; --head:'Oswald','Arial Narrow',Impact,sans-serif; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system,'Segoe UI',Roboto,Arial,sans-serif; }
+  h1,h2 { font-family: var(--head); margin: 0; }
+  .top { display:flex; align-items:center; gap:12px; padding:10px 16px; border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--bg); z-index:3; }
+  .top img { height:40px; } .top h1 { font-size:22px; flex:1; text-transform:uppercase; }
+  .top .st { font-size:13px; color:var(--muted); } .top .st.on { color:var(--green); }
+  .top select, .top button { background:var(--panel); color:var(--text); border:1px solid var(--line); border-radius:10px; padding:8px 10px; font:inherit; }
+  .login { max-width:360px; margin:80px auto; padding:24px; background:var(--panel); border-radius:16px; text-align:center; }
+  .login input { width:100%; font-size:28px; text-align:center; letter-spacing:.3em; padding:12px; border-radius:12px; border:1px solid var(--line); background:#000; color:#fff; margin:14px 0; }
+  .login button { width:100%; background:var(--orange); color:#111; border:0; border-radius:12px; padding:14px; font-family:var(--head); font-size:20px; }
+  .cols { display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; padding:12px 16px; }
+  @media (max-width: 900px) { .cols { grid-template-columns: 1fr; } }
+  .col h2 { font-size:18px; text-transform:uppercase; color:var(--muted); padding:4px 0 8px; display:flex; justify-content:space-between; }
+  .col h2 b { color:var(--text); }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:12px; margin-bottom:10px; }
+  .card.new { border-color: var(--orange); box-shadow: 0 0 0 1px var(--orange); }
+  .card .hd { display:flex; align-items:baseline; gap:10px; margin-bottom:8px; }
+  .card .hd .tb { font-family:var(--head); font-size:30px; color:var(--gold); }
+  .card .hd .no { color:var(--muted); font-size:14px; } .card .hd .tm { margin-left:auto; color:var(--muted); font-size:14px; }
+  .card ul { list-style:none; margin:0; padding:0; } .card li { display:flex; gap:8px; padding:4px 0; border-top:1px solid var(--line); font-size:16px; }
+  .card li b { min-width:34px; font-family:var(--head); font-size:18px; color:var(--orange); }
+  .card li small { color:var(--muted); }
+  .card .note { margin-top:8px; color:var(--gold); font-size:14px; } .card .note::before { content:'✎ '; }
+  .card .ft { display:flex; align-items:center; gap:8px; margin-top:10px; }
+  .card .tot { font-family:var(--head); font-size:18px; margin-right:auto; }
+  .card .ft button { border:0; border-radius:10px; padding:10px 14px; font-family:var(--head); font-size:16px; cursor:pointer; color:#111; }
+  .b-accept { background:var(--blue); } .b-done { background:var(--green); } .b-cancel { background:#444; color:#ddd !important; } .b-undo { background:#333; color:#ddd !important; }
+  .empty { color:#555; text-align:center; padding:30px 10px; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="demo.js"></script>
+<script src="bar.js"></script>
+</body>
+</html>

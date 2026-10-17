@@ -1,0 +1,7 @@
+{
+  "name": "Bar Tent",
+  "port": 3000,
+  "tables": 20,
+  "barPin": "1234",
+  "publicUrl": ""
+}
