@@ -84,7 +84,7 @@
   function renderCategory(id) {
     const c = state.menu.categories.find(x => x.id === id); if (!c) return renderHome();
     let body = '';
-    if (c.layout === 'cards') body = `<div class="cards">${c.items.map(it => itemCard({ cat: c, grp: null, it })).join('')}</div>`;
+    if (c.layout === 'cards') body = `<div class="cards cat-${c.id}">${c.items.map(it => itemCard({ cat: c, grp: null, it })).join('')}</div>`;
     else body = c.groups.map(g => `<div class="group"><h2>${esc(L(g.name))}</h2>${g.items.map(it => itemRow({ cat: c, grp: g, it })).join('')}</div>`).join('');
     return head(L(c.name), '') + body + '<div class="footer"></div>';
   }
