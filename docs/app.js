@@ -11,7 +11,13 @@
     uk: '<svg viewBox="0 0 3 2" class="flag"><rect width="3" height="1" fill="#0057b7"/><rect y="1" width="3" height="1" fill="#ffd700"/></svg>',
   };
   const CAT_EMOJI = { soft: '🥤', alcohol: '🍷', beer: '🍺', cocktails: '🍸', platos: '🍽️' };
-  const CAT_PHOTO = { platos: 'jamon', cocktails: 'mojito', beer: 'beer', alcohol: 'wine' };
+  const ICON = {
+    platos: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 30h36"/><path d="M9 30a15 15 0 0 1 30 0"/><path d="M24 15v-3"/><path d="M10 36h28"/></svg>',
+    cocktails: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8h32L24 26z"/><path d="M24 26v14"/><path d="M15 40h18"/><path d="M13 14h22"/><circle cx="31" cy="7" r="2.5"/></svg>',
+    soft: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14h24l-3 26H15z"/><path d="M12 14l-2-6h28l-2 6"/><path d="M26 14l6-10"/><path d="M15 24h17"/></svg>',
+    alcohol: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6h8v8c0 4 4 6 4 12v14H10V26c0-6 4-8 4-12z"/><path d="M30 10h10c0 10-4 14-5 15v11h4v4H27v-4h4V25c-1-1-5-5-5-15z"/></svg>',
+    beer: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14h20v26H12z"/><path d="M32 20h5a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-5"/><path d="M12 14c-2-6 4-8 6-6 1-4 9-4 10 0 3-2 7 1 4 6"/><path d="M18 22v12M26 22v12"/></svg>',
+  };
 
   const $app = document.getElementById('app');
   const store = { get: (k, d) => { try { const v = localStorage.getItem('bt.' + k); return v === null ? d : JSON.parse(v); } catch { return d; } }, set: (k, v) => { try { localStorage.setItem('bt.' + k, JSON.stringify(v)); } catch {} } };
@@ -56,18 +62,18 @@
     else if (r.page === 'done') html = renderDone(r.arg);
     else html = renderHome();
     if (r.page !== 'cart' && r.page !== 'done' && cartCount()) html += `<div class="cartbar"><button data-go="cart"><span><span class="cnt">${cartCount()}</span></span><span>${t('order')} · ${money(cartTotal())}</span><span>→</span></button></div>`;
-    $app.innerHTML = html; window.scrollTo(0, 0);
+    $app.innerHTML = html; $app.classList.toggle('home', r.page === 'home' && !cartCount()); window.scrollTo(0, 0);
   }
   const langs = () => `<div class="langs">${['es', 'en', 'uk'].map(l => `<button data-lang="${l}" class="${l === state.lang ? 'on' : ''}" aria-label="${l}">${FLAGS[l]}</button>`).join('')}</div>`;
   const tableBadge = () => state.table ? `<span class="table-badge">${t('table')} ${esc(state.table)}</span>` : '';
   function head(title, back) { return `<div class="top"><div class="band">Bar Tent · ${t('schedule')}</div><div class="row">${back !== undefined ? `<button class="back" data-go="${back}" aria-label="${t('back')}">‹</button>` : `<img class="logo" src="img/logo.svg" alt="Bar Tent">`}<h1>${esc(title)}</h1>${tableBadge()}${langs()}</div></div>`; }
   function renderHome() {
     const m = state.menu;
-    const tiles = m.categories.map((c, i) => { const ph = CAT_PHOTO[c.id]; const wide = i === 0 ? ' wide' : ''; return `<button class="tile${wide}" data-go="c/${c.id}">${ph ? `<img src="img/${ph}-s.jpg" alt="">` : `<div class="em">${CAT_EMOJI[c.id] || ''}</div>`}<span>${esc(L(c.name))}</span></button>`; }).join('');
+    const list = m.categories.map(c => `<button class="catbtn" data-go="c/${c.id}"><span class="ico">${ICON[c.id] || ''}</span><span class="lbl">${esc(L(c.name))}</span><span class="chev">›</span></button>`).join('');
     return `<div class="top"><div class="band">Bar Tent · ${t('schedule')}</div><div class="row"><h1>${t('menu')}</h1>${tableBadge()}${langs()}</div></div>
-      <div class="hero"><img src="img/logo.svg" alt="Bar Tent"></div>
+      <div class="hero xl"><img src="img/logo.svg" alt="Bar Tent"></div>
       ${m.tapasNote ? `<div class="note">${esc(L(m.tapasNote))}</div>` : ''}
-      <div class="tiles">${tiles}</div><div class="footer">Bar Tent</div>`;
+      <div class="catlist">${list}</div>`;
   }
   function itemCard(entry) {
     const { it } = entry; const pl = priceList(entry); const q = cartQty(it.id, pl[0].vid);
