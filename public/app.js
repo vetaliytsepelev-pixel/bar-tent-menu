@@ -53,6 +53,7 @@
   const cartTotal = () => cartLines().reduce((s, l) => s + l.price * l.qty, 0);
 
   // ---- вывод ----
+  let lastRoute = null;
   const route = () => { const h = location.hash.replace(/^#\/?/, ''); const [a, b] = h.split('/'); return { page: a || 'home', arg: b }; };
   function render() {
     if (!state.menu) return;
@@ -62,7 +63,10 @@
     else if (r.page === 'done') html = renderDone(r.arg);
     else html = renderHome();
     if (r.page !== 'cart' && r.page !== 'done' && cartCount()) html += `<div class="cartbar"><button data-go="cart"><span><span class="cnt">${cartCount()}</span></span><span>${t('order')} · ${money(cartTotal())}</span><span>→</span></button></div>`;
-    $app.innerHTML = html; $app.classList.toggle('home', r.page === 'home' && !cartCount()); window.scrollTo(0, 0);
+    const routeKey = r.page + '/' + (r.arg || ''); const sameScreen = routeKey === lastRoute; const y = window.scrollY;
+    $app.innerHTML = html; $app.classList.toggle('home', r.page === 'home' && !cartCount());
+    if (sameScreen) window.scrollTo(0, y); else window.scrollTo(0, 0);
+    lastRoute = routeKey;
   }
   const langs = () => `<div class="langs">${['es', 'en', 'uk'].map(l => `<button data-lang="${l}" class="${l === state.lang ? 'on' : ''}" aria-label="${l}">${FLAGS[l]}</button>`).join('')}</div>`;
   const tableBadge = () => state.table ? `<span class="table-badge">${t('table')} ${esc(state.table)}</span>` : '';
