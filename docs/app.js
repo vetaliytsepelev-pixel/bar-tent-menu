@@ -78,7 +78,7 @@
   function itemCard(entry) {
     const { it } = entry; const pl = priceList(entry); const q = cartQty(it.id, pl[0].vid);
     const ctrl = pl.length > 1 ? priceButtons(entry, pl) : (q ? stepper(it.id, pl[0].vid, q) : `<button class="add" data-add="${it.id}" aria-label="${t('add')}">+</button>`);
-    return `<div class="card"><div class="ph">${it.photo ? `<img src="img/${it.photo}-s.jpg" alt="" loading="lazy">` : ''}</div><div class="body"><div class="nm">${esc(L(it.name))}</div>${it.desc ? `<div class="ds">${esc(L(it.desc))}</div>` : ''}<div class="bt">${pl.length > 1 ? '' : `<span class="price">${money(pl[0].price)}</span>`}${ctrl}</div></div></div>`;
+    return `<div class="card"><div class="ph" ${it.photo ? `data-zoom="${it.photo}"` : ''}>${it.photo ? `<img src="img/${it.photo}-s.jpg" alt="" loading="lazy">` : ''}</div><div class="body"><div class="nm">${esc(L(it.name))}</div>${it.desc ? `<div class="ds">${esc(L(it.desc))}</div>` : ''}<div class="bt">${pl.length > 1 ? '' : `<span class="price">${money(pl[0].price)}</span>`}${ctrl}</div></div></div>`;
   }
   const stepper = (id, vid, q) => `<div class="step"><button data-dec="${id}" data-vid="${vid || ''}">−</button><b>${q}</b><button data-inc="${id}" data-vid="${vid || ''}">+</button></div>`;
   function priceButtons(entry, pl) { return `<div class="pv">${pl.map(v => { const q = cartQty(entry.it.id, v.vid); return `<button data-add="${entry.it.id}" data-vid="${v.vid || ''}"><small>${esc(v.label || '')}</small><b>${money(v.price)}</b>${q ? `<span class="q">×${q}</span>` : ''}</button>`; }).join('')}</div>`; }
@@ -107,6 +107,8 @@
 
   // ---- события ----
   $app.addEventListener('click', async e => {
+    const z = e.target.closest('[data-zoom]');
+    if (z) { const ov = document.createElement('div'); ov.className = 'zoom'; ov.innerHTML = `<img src="img/${z.dataset.zoom}.jpg" alt=""><span class="x">✕</span>`; ov.addEventListener('click', () => ov.remove()); document.body.appendChild(ov); return; }
     const b = e.target.closest('button'); if (!b) return;
     if (b.dataset.lang) { state.lang = b.dataset.lang; store.set('lang', state.lang); document.documentElement.lang = state.lang; render(); return; }
     if (b.dataset.go !== undefined) { location.hash = b.dataset.go ? '#/' + b.dataset.go : ''; return; }
